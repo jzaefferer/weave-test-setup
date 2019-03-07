@@ -1,0 +1,15 @@
+[Unit]
+Description=Weave Network
+Documentation=http://docs.weave.works/weave/latest_release/
+Requires=docker.service
+After=docker.service
+
+[Service]
+EnvironmentFile=-/etc/sysconfig/weave
+ExecStartPre=/usr/bin/weave launch --log-level=debug --name ::NAME --no-restart --dns-domain="node.intern." --ipalloc-range 10.0.0.0/8 --ipalloc-default-subnet 10.1.1.0/24 --password hjoo7VourohpeiChiepai8piakohdoh811princE --rewrite-inspect -H unix:///var/run/weave/weave.sock --no-default-ipalloc --ipalloc-init seed=::1,::2,::3 $PEERS
+ExecStart=/usr/bin/docker attach weave
+ExecStop=/usr/local/bin/weave stop
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

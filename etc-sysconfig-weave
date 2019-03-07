@@ -1,0 +1,5 @@
+# Ansible managed
+PEERS="20.20.20.21 20.20.20.22 20.20.20.23"
+SEED="::1,::2,::3"
+WEAVE_NO_FASTDP=true
+WEAVE_MTU=1414
