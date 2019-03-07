@@ -13,3 +13,5 @@ $ docker ps
 $ docker stop x y
 $ weave status dns
 # repeat until `weave status dns` shows more addresses than it should
+```
+edit the `weave_version` variable inside the `Vagrantfile` to test with different weave versions
