@@ -3,7 +3,7 @@
 needs vagrant
 ```
 $ vagrant up
-$ vagrant up node1
+$ vagrant ssh node1
 # now inside the box
 $ sudo su
 # now as root
