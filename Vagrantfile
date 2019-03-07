@@ -22,8 +22,8 @@ Vagrant.configure(2) do |config|
     curl -fsSL https://get.docker.com -o get-docker.sh
     sh get-docker.sh
     # install weave
-    #weave_version=latest_release
-    weave_version=v2.3.0
+    #weave_version=v2.3.0
+    weave_version=latest_release
     sudo curl -L https://github.com/weaveworks/weave/releases/download/$weave_version/weave -o /usr/bin/weave
     sudo chmod a+x /usr/bin/weave
     sudo chmod a+x /vagrant/start.sh
